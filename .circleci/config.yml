@@ -1,11 +1,10 @@
 version: 2
 jobs:
-  npm:
+  build:
     docker:
       - image: circleci/node:8.13.0
     steps:
       - checkout
       - run:
-      	  name: npm-test
-          command: 'npm test'
- 
+          name: install-npm-wee
+          command: npm install
