@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run unit && npm run integration",
+    "unit": "mocha test/unit_test.js",
+    "integration": "mocha test/integration_test.js"
   },
   "repository": {
     "type": "git",
