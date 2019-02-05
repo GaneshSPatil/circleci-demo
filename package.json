@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run unit && npm run integration",
-    "unit": "mocha test/unit_test.js",
-    "integration": "mocha test/integration_test.js"
+    "test": "nyc --reporter=lcov --reporter=text-lcov mocha",
+    "unit": "nyc --reporter=lcov --reporter=text-lcov mocha test/unit_test.js",
+    "integration": "nyc --reporter=lcov --reporter=text-lcov  mocha test/integration_test.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/GaneshSPatil/circleci-demo#readme",
   "devDependencies": {
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "nyc": "^13.2.0"
   }
 }
