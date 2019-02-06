@@ -47,3 +47,6 @@ workflows:
     jobs:
     - unit
     - integration
+        requires:
+        - unit
+
